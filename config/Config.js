@@ -3,5 +3,5 @@ global.mongodbHost = 'localhost';
 
 
 global.mongodbPort = 27017;
-global.mongodbDB = 'healthTest';
+global.mongodbDB = 'health';
 global.listenerPort = 3000;

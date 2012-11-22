@@ -7,14 +7,14 @@ var fs = require("fs");
 var path = require('path');
 
 var index=0;
-var stream = fs.createReadStream(path.join('/home/mrj/enwiki-latest-pages-articles5.xml'));
+var stream = fs.createReadStream(path.join('/Users/mrj/Downloads/enwiki-latest-pages-articles5.xml'));
 var xml = new XmlStream(stream);
 
 //xml.preserve('item', true);
 xml.on('startElement: page', function(item) {});
 
 xml.on('endElement: page', function(item) {
-    var page=JSON.stringify(item).replace(/$/,"@");
+    var page=JSON.stringify(item).replace("$","@");
     wikiProvider.insert(page,{},function(err,result){
         if(err){console.log('insert err:',err);console.log(item)}
         if(result){index+=1;console.log('insert success  '+index);}

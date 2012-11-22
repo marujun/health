@@ -30,14 +30,14 @@ function insertUser(param, otherData, current, callback){
 }
 
 console.time('计时器1');
-task.startTasks([], {}, addTestUser, 0, 10000000, function(){
+task.startTasks([], {}, addTestUser, 0, 10000, function(){
     console.timeEnd('计时器1');
     testProvider.count({}, function (err, count) {console.log('数据库一共有'+count+'条记录');});
 });
 
 function addTestUser(param, otherData, current, callback){
 //    var user={name:random('name')};
-    var user={name:random('name'),age:random('age'),gender:random('gender'),birthday:random('date'),mobile:random('phone'),note:random(3000)};
+    var user={name:random('name'),age:random('age'),gender:random('gender'),birthday:random('birthday'),mobile:random('phone'),note:random(100)};
 //    console.log('user: ',JSON.stringify(user));
     testProvider.insert(user,{},function(err,result){
         if(err){console.log('insert err:',err);}

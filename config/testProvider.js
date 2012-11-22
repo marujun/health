@@ -10,7 +10,7 @@ var DataProvider = require('./DataProvider.js').DataProvider,
 
 var testProvider = function() {
     console.log("new  testProvider");
-    this.collectionName = "tests";
+    this.collectionName = "test";
 };
 
 util.inherits(testProvider, DataProvider);
