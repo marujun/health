@@ -1,0 +1,76 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+    <title>user list</title>
+    <script type="text/javascript" src="../../../javascripts/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../../../javascripts/userList.js"></script>
+    <script type="text/javascript" src="../../../javascripts/search.js"></script>
+    <link href="../../../stylesheets/list.css" rel='stylesheet'>
+</head>
+<body>
+<div id="search">
+    <input id="searchWord" /><button id="searchStart" onclick="search()">搜索</button>
+</div>
+<!--<script language="javascript">alert('报名资料提交成功！');</script>-->
+<div id="app" title="list">
+    <table border="1" >
+        <tr>
+            <td>姓名</td>
+            <td>活动</td>
+            <td>生日</td>
+            <td class="wide">身份证号码</td>
+            <td>性别</td>
+            <td>身高</td>
+            <td>电话</td>
+            <td>email</td>
+            <td>居住城市</td>
+            <td class="wide">居住地址</td>
+            <td class="wide">备注</td>
+        </tr>
+        <% users.forEach(function(user){ %>
+        <tr class="userTr">
+            <td><%= user.personal.name %></td>
+            <td><%= user.activity.campaign %></td>
+            <td><%= user.personal.birthday %></td>
+            <td class="wide"><%= user.personal.user_id %></td>
+            <td><%= user.personal.gender %></td>
+            <td><%= user.personal.height %></td>
+            <td><%= user.personal.mobile %></td>
+            <td><%= user.personal.email %></td>
+            <td><%= user.personal.city_id %></td>
+            <td class="wide"><%= user.personal.address %></td>
+            <td class="wide"><%= user.personal.note %></td>
+        </tr>
+        <% })%>
+    </table>
+</div>
+
+<div id="page">
+    <div class="pageButton">
+        <button id="backPage" onclick="back()">上一页</button>
+        <button id="nextPage" onclick="next()">下一页</button>
+    </div>
+    <div class="detailPage">
+        <nav class="pagination">
+            <li class="page one">
+                <button id="pageone" onclick="pageDetail(1,'one')">1</button>
+            </li>
+            <li class="page" >
+                <button id="pagetwo" onclick="pageDetail(2,'two')">2</button>
+            </li>
+            <li class="page three">
+                <button id="pagethree" onclick="pageDetail(3,'three')">3</button>
+            </li>
+            <li class="page four">
+                <button id="pagefour" onclick="pageDetail(4,'four')">4</button>
+            </li>
+            <li class="page five">
+                <button id="pagefive" onclick="pageDetail(5,'five')">5</button>
+            </li>
+            <li class="page gap"><label>...</label></li>
+            <li class="page last"><button id="pagelast" onclick="pageDetail(<%= pages %>,'last')" value="<%= pages %>">最后一页</button></li>
+        </nav>
+    </div>
+</div>
+</body>
+</html>

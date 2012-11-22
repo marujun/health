@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    background: #F8F8F8;
+    font-size: 16px;
+}
+
+#app {
+    position: relative;
+    margin-left: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-left: 1px solid #888;
+    border-top: 1px solid #888;
+    background: #efefef;
+}
+
+
+a {
+    color: #00B7FF;
+}
+
+td {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+}
+
+.wide {
+    width: 200px;
+}
+
+#page{
+    position: absolute;
+    margin-left: 40%;
+    height: 40px;
+    margin-top: 20px;
+}
+#backPage{
+    font-size: 20px;
+    height: 35px;
+}
+#nextPage{
+    font-size: 20px;
+    height: 35px;
+}
+
+.pageButton{
+    float: left;
+}
+/*     pages    */
+/* line 1, ../../../app/assets/stylesheets/bootstrap/paginator.css.scss */
+.detailPage{
+    /*display: inline-block;*/
+    float: left;
+    margin-left: 200px;
+    height: 36px;
+    /*margin-top: 20px;*/
+    *display: inline;
+    /* IE7 inline-block hack */
+    *zoom: 1;
+}
+/* line 4, ../../../app/assets/stylesheets/bootstrap/paginator.css.scss */
+.pagination ul {
+    display: inline-block;
+    *display: inline;
+    /* IE7 inline-block hack */
+    *zoom: 1;
+    margin-left: 0;
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 17, ../../../app/assets/stylesheets/bootstrap/paginator.css.scss */
+.pagination li {
+    display: inline;
+}
+/* line 19, ../../../app/assets/stylesheets/bootstrap/paginator.css.scss */
+.pagination button {
+    float: left;
+    padding: 0 14px;
+    line-height: 34px;
+    text-decoration: none;
+    border: 0 solid #ddd;
+    border-left-width: 0;
+}
+.pagination label {
+    float: left;
+    padding: 0 14px;
+    line-height: 34px;
+    text-decoration: none;
+    border-left-width: 0;
+}
+
+.pagination button:hover {
+    background-color: #f5f5f5;
+}
+
+
+#search {
+    margin-left: 80%;
+    height: 40px;
+    margin-top: 30px;
+}
+
+#searchStart{
+    font-size: 20px;
+    height: 31px;
+}
+
+#search input {
+    float: left;
+    height: 25px;
+}
+

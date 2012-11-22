@@ -1,0 +1,23 @@
+
+/* line 16, ../../../app/assets/stylesheets/html5-admin/layout.css.scss */
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+/* line 21, ../../../app/assets/stylesheets/html5-admin/layout.css.scss */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    background: #F8F8F8;
+    font-size: 12px;
+}
+#app{
+    position: absolute;
+    margin-left: 200px;
+}
+a {
+  color: #00B7FF;
+}

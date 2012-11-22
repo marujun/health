@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>health</title>
+    <link href="stylesheets/style.css" rel='stylesheet'>
+</head>
+<body>
+<div id="app">
+<form accept-charset="UTF-8" action="/admin/user/create" class="simple_form form-horizontal" id="new_user"
+      method="post">
+    <div style="margin:0;padding:0;display:inline">
+        <input name="utf8" type="hidden" value="✓">
+        <input name="authenticity_token" type="hidden" value="+SUcRfhHESQVtV6gKLTdakbQISPAPtH+o5hFjfTpTiY=">
+    </div>
+    <div class="module_content">
+        <h2>活動報名資料 </h2>
+
+        <div class="input select required field_with_hint">
+            <label class="select required" for="user_campaign">
+                <abbr title="required">*</abbr> 參加活動</label>
+            <select class="select required" id="user_campaign" name="user[campaign]">
+                <option value="">請選擇</option>
+                <option value="健康大使">健康大使</option>
+                <option value="体重管理挑战赛">体重管理挑战赛</option>
+            </select><span class="hint">活動設定後無法修改</span></div>
+        <div class="input string optional">
+            <label class="string optional" for="user_product_no"> 抽獎登錄編號</label>
+            <input class="string optional" id="user_product_no" maxlength="10" name="user[product_no]" size="10"
+                   type="text"></div>
+        <div class="input string required field_with_hint">
+            <label class="string required" for="user_serial_no">
+                <abbr title="required">*</abbr> 直銷商編號</label>
+            <input class="string required" id="user_serial_no" maxlength="30" name="user[serial_no]" required="required"
+                   size="30" type="text">
+            <span class="hint">直銷商編號即為參賽者之登入帳號，若無直銷商編號請輸入手機號碼</span></div>
+        <div class="input string required">
+            <label class="string required" for="user_upline_no">
+                <abbr title="required">*</abbr>推薦人直銷商編號</label>
+            <input class="string required" id="user_upline_no" maxlength="30" name="user[upline_no]" required="required"
+                   size="30" type="text"></div>
+        <div class="input string required">
+            <label class="string required" for="user_upline_name">
+                <abbr title="required">*</abbr>推薦人直銷商姓名</label>
+            <input class="string required" id="user_upline_name" maxlength="20" name="user[upline_name]"
+                   required="required" size="20" type="text"></div>
+        <h2> 參賽個人資料 </h2>
+
+        <div class="input string optional"><label class="string optional" for="user_name"> 姓名</label><input
+                class="string optional" id="user_name" maxlength="30" name="user[name]" size="30" type="text"></div>
+        <div class="input string optional">
+            <label class="string optional" for="user_birthday"> 出生年月日</label>
+            <input class="string optional birthday_field hasDatepicker" id="user_birthday" name="user[birthday]"
+                   size="50" type="text">
+        </div>
+        <div class="input string optional"><label class="string optional" for="user_user_id"> 身份證字號</label>
+            <input class="string optional" id="user_user_id" maxlength="20" name="user[user_id]" size="20" type="text">
+        </div>
+        <div class="input select optional">
+            <label class="select optional" for="user_gender"> 性別</label>
+            <select class="select optional" id="user_gender" name="user[gender]">
+                <option value="男" selected="selected">男</option>
+                <option value="女">女</option>
+            </select></div>
+        <div class="input numeric required field_with_hint">
+            <label class="numeric required" for="user_height">
+                <abbr title="required">*</abbr> 身高</label>
+            <input class="numeric numeric required" id="user_height" min="50" name="user[height]" required="required"
+                   step="any" type="number">
+            <span class="hint">單位：公分</span></div>
+        <div class="input string required field_with_hint"><label class="string required" for="user_mobile"><abbr
+                title="required">*</abbr> 聯絡電話(手機或市話)</label>
+            <input class="string required" id="user_mobile"
+                   maxlength="20"
+                   name="user[mobile]" required="required"
+                   size="20"
+                   type="text"><span class="hint">第一次使用行動電話號碼登入，之後可自行修改 (電話號碼僅使用數字，不含符號)</span>
+        </div>
+        <div class="input email optional">
+            <label for="user_email"> Email</label>
+            <input id="user_email" maxlength="75" name="user[email]" size="50" type="email">
+        </div>
+        <div class="input select optional">
+            <label class="select optional" for="user_city_id"> 縣市</label>
+            <select class="select optional" id="user_city_id" name="user[city_id]">
+                <option value="台北市">台北市</option>
+                <option value="新北市">新北市</option>
+                <option value="台中市">台中市</option>
+            </select></div>
+        <div class="input string optional">
+            <label class="string optional" for="user_address"> 地址</label>
+            <input class="string optional" id="user_address" maxlength="150" name="user[address]" size="50" type="text">
+        </div>
+        <div class="input text optional">
+            <label class="text optional" for="user_note"> 備註說明</label>
+            <textarea class="text optional" cols="60" id="user_note" name="user[note]" rows="6"></textarea>
+        </div>
+        <div class="require_field_note">有*號者為必填欄位</div>
+    </div>
+    <input style="font-size: 20px;height: 31px;" data-confirm="確認新增參賽者" name="commit" type="submit" value="確認送出">
+</form>
+</div>
+</body>
+</html>
